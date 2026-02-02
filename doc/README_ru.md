@@ -66,39 +66,6 @@ python run_polling.py
 ``` bash
 python manage.py runserver
 ```
-## Другие сервисные команды проекта
-
-Экспортировать модели Location и User в файлы
-``` bash
-python manage.py dumpdata users.Location --indent=2 --output=downloads/location_data.json
-python manage.py dumpdata users.User --indent=2 --output=downloads/users_data.json
-```
-Экспортировать все модели в файл за исключением системных Django
-``` bash
-python manage.py dumpdata --exclude auth.permission --exclude auth.user --exclude contenttypes --exclude auth.group --exclude admin.logentry --exclude sessions.session --indent 2 > db-init-telebot.json
-```
-Выгрузить и загрузить регулярные задачи
-``` bash
-python manage.py dumpdata django_celery_beat -o doc/tasks.json
-python manage.py loaddata doc/tasks.json
-```
-
-Выгрузить и загрузить данные объектов group_roles в файл
-``` bash
-python manage.py export_group_roles --file doc/group_roles.json
-python manage.py import_group_roles --file doc/group_roles.json --dry-run
-```
-
-Выгрузить и загрузить данные объектов options в файл
-``` bash
-python manage.py export_options --file doc/options.json
-python manage.py import_options --file doc/options.json --dry-run
-```
-
-Запустить проверку проекта
-``` bash
-python manage.py check
-```
 
 ## Запустите локально с помощью docker-compose
 Если вы хотите просто запустить все локально, вы можете использовать Docker-compose, который запустит все контейнеры для вас.
@@ -112,12 +79,8 @@ docker-compose up -d --build
 
 Проверьте статус контейнеров.
 ``` bash
-docker ps -a
+docker-compose ps
 ```
-Это должно выглядеть примерно так:
-<p align="left">
-<img src="https://github.com/ohld/django-telegram-bot/raw/main/.github/imgs/containers_status.png">
-</p>
 
 Попробуйте посетить <a href="http://0.0.0.0:8000/tgadmin">панель администратора Django</a>.
 
@@ -136,22 +99,6 @@ python manage.py createsuperuser
 ``` bash
 python manage.py createsuperuser --noinput --username adm --email adm@localhost.com # .env DJANGO_SUPERUSER_PASSWORD=demo
 ```
-
-### Экспортировать модели Location и User в файлы
-``` bash
-docker exec -it dtb_django bash
-...123:/code# python manage.py dumpdata users.Location --indent=2 --output=downloads/location_data.json
-...123:/code# python manage.py dumpdata users.User --indent=2 --output=downloads/users_data.json
-```
-
-### Экспортировать\импортировать данные регулярных задач специальными командами 
-``` bash
-docker exec -it dtb_django bash
-...123:/code# python manage.py export_celery_tasks --output downloads/my_tasks.json
-...123:/code# python manage.py import_celery_tasks downloads/my_tasks.json --dry-run
-```
-
-
 
 ### Чтобы просмотреть логи контейнера:
 
