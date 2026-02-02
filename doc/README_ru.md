@@ -48,7 +48,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-Создайте суперпользователя для доступа к панели администратора интервктивно:
+Создайте суперпользователя для доступа к панели администратора интерактивно:
 ``` bash
 python manage.py createsuperuser
 ```
