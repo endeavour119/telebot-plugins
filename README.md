@@ -1,10 +1,10 @@
-<img src="https://github.com/SergeyMi37/telebot-plugins/raw/main/doc/logo_min.png">
+<img src="https://github.com/5erpant1n/telebot-plugins/raw/main/doc/logo_min.png">
 
 ## telebot-plugins
 
 Chatbot project with Django Admin and plugins
 
-[Документация](https://github.com/SergeyMi37/telebot-plugins/raw/main/doc/README_ru.md)
+[Документация](https://github.com/5erpant1n/telebot-plugins/raw/main/doc/README_ru.md)
 
 [Групп разработки бота](https://t.me/+LXQkVtnHqSM1ZmZi) 
 
@@ -30,11 +30,11 @@ Currently supported plug-ins:
 - Module for obtaining information from reference books of Russian regions codes and searching for a country by the beginning of the barcode
 
 <p align="left">
-    <img src="https://github.com/SergeyMi37/telebot-plugins/raw/main/doc/Screenshot_1.png">
+    <img src="https://github.com/5erpant1n/telebot-plugins/raw/main/doc/Screenshot_1.png">
 </p>
 
 ``` bash
-git clone https://github.com/SergeyMi37/telebot-plugins
+git clone https://github.com/5erpant1n/telebot-plugins
 cd telebot-plugins
 ```
 
