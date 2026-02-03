@@ -99,7 +99,7 @@ dev:  # https://api.telegram.org/bot<token>/getUpdates
         - blocked = 1
         - desc = Запомнить ссылку для последующего быстрого поиска и открытия (Например для маршрутов Яндекс карт)
     - CHINESE:
-        - blocked = 0
+        - blocked = 1
         - desc = Учить китайские иероглифы. Поиск этимологиеи и перевод.
     - TRANS:
         - blocked = 1
