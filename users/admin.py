@@ -66,4 +66,4 @@ class OptionsAdmin(admin.ModelAdmin):
 
 @admin.register(Updates)
 class UpdatesAdmin(admin.ModelAdmin):
-     list_display = ['update_id','from_id', 'chat_id']
+     list_display = ['update_id','message','from_id','json','chat_id']
